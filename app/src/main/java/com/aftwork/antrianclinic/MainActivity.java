@@ -4,12 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 
+import com.aftwork.antrianclinic.dao.AntrianClinicDbHelper;
+import com.aftwork.antrianclinic.dao.AntrianDao;
 import com.aftwork.antrianclinic.fragment.AkunFragment;
 import com.aftwork.antrianclinic.fragment.AntriFragment;
 import com.aftwork.antrianclinic.fragment.ChatFragment;
@@ -19,20 +26,23 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity
             implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-//    ListView listView;
-//
-//    String[] artikel = {
-//            "Berita Kesehatan 1","Berita Kesehatan 2","Berita Kesehatan 3","Berita Kesehatan 4"
-//    };
+    AntrianDao db;
+    EditText editIdentitas, editNama;
+    RadioGroup radiolayanan;
+    String layanan;
+    Button btnInsertAntrian;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
 
-//        listView = findViewById( R.id.lv_artikel );
-//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>( this, R.layout.fr_home, artikel );
-//        listView.setAdapter( arrayAdapter );
+        editIdentitas = (EditText)findViewById( R.id.editTextIdentitas );
+        editNama = (EditText)findViewById( R.id.editTextNama );
+        radiolayanan = (RadioGroup)findViewById( R.id.layananRadio );
+        btnInsertAntrian = (Button)findViewById( R.id.btnAntri );
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
@@ -46,6 +56,7 @@ public class MainActivity extends AppCompatActivity
 
 
     }
+
 
 
     @Override

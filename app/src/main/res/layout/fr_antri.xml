@@ -3,7 +3,72 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_antri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Antri Fragment" />
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/editTextIdentitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_antri"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nomor Identitas"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextIdentitas"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nama Pasien"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:id="@+id/layananRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextNama"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        >
+
+        <RadioButton
+            android:id="@+id/radioUmum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dokter Umum" />
+
+        <RadioButton
+            android:id="@+id/radioGigi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dokter Gigi" />
+
+        <RadioButton
+            android:id="@+id/radioKebidanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kebidanan" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAntri"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/layananRadio"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+
+        android:text="Submit" />
+
+
 </RelativeLayout>
