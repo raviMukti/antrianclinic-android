@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_chat_black_24dp"/>
+    <item
+        android:id="@+id/nav_antri"
+        android:title="Antri"
+        android:icon="@drawable/ic_queue_black_24dp"/>
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <item
+        android:id="@+id/nav_user"
+        android:title="Akun"
+        android:icon="@drawable/ic_person_outline_black_24dp"/>
+</menu>
